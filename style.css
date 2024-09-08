@@ -1,0 +1,224 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+h2,
+h3 {
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #673ab7, #9c27b0);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* New Post Form Section */
+.new-post {
+  background-color: #fff;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.new-post h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.new-post form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-post input,
+.new-post textarea {
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.new-post input:focus,
+.new-post textarea:focus {
+  border-color: #673ab7;
+}
+
+.new-post button {
+  background-color: #673ab7;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.new-post button:hover {
+  background-color: #e46dfc;
+}
+
+/* Posts Section */
+.posts {
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+.posts h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.posts .post {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.posts .post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.posts .post h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #673ab7;
+}
+
+.posts .post p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.posts .post .author {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .new-post,
+  .posts {
+    padding: 20px;
+  }
+
+  .posts .post {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .new-post h2,
+  .posts h2 {
+    font-size: 1.5rem;
+  }
+
+  .posts .post h3 {
+    font-size: 1.4rem;
+  }
+}
+/* Styling the Edit and Delete buttons */
+button.edit-btn, button.delete-btn {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* Common button hover effect */
+  button.edit-btn:hover, button.delete-btn:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* Edit button styling */
+  button.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  button.edit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Delete button styling */
+  button.delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  button.delete-btn:hover {
+    background-color: #e53935;
+  }
+  
+  /* Optional: Adding icons to the buttons */
+  button.edit-btn::before {
+    content: '✎'; /* Unicode for pencil icon */
+    font-size: 1rem;
+  }
+  
+  button.delete-btn::before {
+    content: '🗑'; /* Unicode for trash icon */
+    font-size: 1rem;
+  }
+  

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Blogging Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>My Blog</h1>
+  </header>
+
+  <!-- New Post Form -->
+  <section class="new-post">
+    <h2>Create a New Post</h2>
+    <form id="postForm">
+      <input type="text" id="postTitle" placeholder="Post Title" required>
+      <textarea id="postContent" placeholder="Post Content" required></textarea>
+      <input type="text" id="postAuthor" placeholder="Author Name" required>
+      <button type="submit">Add Post</button>
+    </form>
+  </section>
+
+  <!-- Posts Section -->
+<section class="posts">
+    <h2>Recent Posts</h2>
+  
+    <div class="post">
+      <h3>Sample Post Title</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sint fugit nihil. Facere sunt labore voluptate, debitis laboriosam nesciunt nam aspernatur iusto in dolorem neque deserunt repellendus nihil nobis obcaecati.</p>
+      <p class="author">
+        Posted by: John Doe on 2024-09-01
+      </p>
+      <button class="edit-btn">
+        Edit
+      </button>
+      <button class="delete-btn">
+        Delete
+      </button>
+    </div>
+  
+    <div class="post">
+      <h3>Another Post Title</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente ut inventore iste illum sequi nemo, nam earum dignissimos porro rem ducimus at veritatis hic velit excepturi molestiae ipsum dicta eaque!</p>
+      <p class="author">
+        Posted by: Frank Okudo on 2024-08-25
+      </p>
+      <button class="edit-btn">
+        Edit
+    </button>
+      <button class="delete-btn">
+        Delete
+      </button>
+    </div>
+  </section>
+  
+
+  <script src="app.js"></script>
+</body>
+</html>
